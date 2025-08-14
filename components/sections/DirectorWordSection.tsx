@@ -33,7 +33,7 @@ export default function DirectorWordSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h2 className="mb-8 text-3xl font-bold md:text-4xl">
-                Mot du <span className="text-gold">Dirigeant</span>
+                Mot du <span className="text-gold">dirigeant</span>
               </h2>
 
               <div className="space-y-4 text-white/80">
