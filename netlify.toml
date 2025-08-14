@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"   # build + export -> out/
+  publish = "out"             # Bolt doit publier ce dossier
+
+# Très important : ne PAS utiliser le plugin Next pour SSR
+# (on fait un export statique)
+# [[plugins]]
+# package = "@netlify/plugin-nextjs"
