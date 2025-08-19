@@ -5,8 +5,6 @@ import { usePathname } from 'next/navigation';
 
 const menuItems = [
   { name: 'Accueil', href: '/' },
-  { name: 'Bâtiment', href: '#batiment' },
-  { name: 'Immobilier', href: '#immobilier' },
   { name: 'Salle de Bain', href: '/sdb' },
   { name: 'Nos Valeurs', href: '#valeurs' },
   { name: 'Réalisations', href: '#realisations' },
@@ -18,13 +16,7 @@ export default function Navigation() {
   const isSdbPage = pathname === '/sdb';
 
   // Items to hide on SDB page
-  const hiddenOnSdb = [
-    'Bâtiment',
-    'Immobilier',
-    'Nos Valeurs',
-    'Réalisations',
-    'Témoignages',
-  ];
+  const hiddenOnSdb = ['Nos Valeurs', 'Réalisations', 'Témoignages'];
 
   const visibleItems = isSdbPage
     ? menuItems.filter((item) => !hiddenOnSdb.includes(item.name))
