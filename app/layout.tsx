@@ -40,6 +40,15 @@ export default function RootLayout({
         <Script async src="https://tally.so/widgets/embed.js" />
       </head>
       <body className="bg-black font-sans text-white">
+        {/* Clickio Consent Mode v2 - Must be loaded before GTM */}
+        <Script
+          id="clickio-consent"
+          strategy="beforeInteractive"
+          defer
+          src="https://clickiocdn.com/t/245118/di.js"
+        />
+        {/* End Clickio Consent Mode v2 */}
+
         {/* Google Tag Manager */}
         <Script id="gtm-script" strategy="beforeInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
