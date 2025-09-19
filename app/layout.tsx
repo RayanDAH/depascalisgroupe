@@ -24,6 +24,38 @@ export default function RootLayout({
   return (
     <html lang="fr" className="scroll-smooth">
       <head>
+        {/* Microsoft Clarity - Must be loaded first */}
+        <Script
+          id="clarity-script"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "td98vuvs7o");`,
+          }}
+        />
+        {/* End Microsoft Clarity */}
+
+        {/* CookieHub - Must be loaded early */}
+        <Script
+          id="cookiehub-script"
+          strategy="beforeInteractive"
+          src="https://cdn.cookiehub.eu/c2/b07a1315.js"
+        />
+        <Script
+          id="cookiehub-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `document.addEventListener("DOMContentLoaded", function(event) {
+var cpm = {};
+window.cookiehub.load(cpm);
+});`,
+          }}
+        />
+        {/* End CookieHub */}
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
